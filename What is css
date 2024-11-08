@@ -1,0 +1,20 @@
+
+What is CSS?
+
+Cascading Style Sheets (CSS) is a fundamental language used to style web pages.
+It separates the presentation of a document (fonts, colors, layout, etc.) from its content (HTML).
+This separation makes web development more efficient, maintainable, and allows for consistent styling across different pages.
+
+Why is CSS important?
+
+Separation of Concerns: Keeps HTML focused on content and CSS focused on presentation, making code easier to manage.
+Consistent Styling: Applying the same styles across multiple pages saves time and ensures a cohesive look.
+Responsiveness: CSS allows you to create layouts that adapt to different screen sizes, making your website accessible on various devices.
+Visual Appeal: CSS enables you to create stunning designs with various fonts, colors, layouts, and effects.
+Basic Structure of CSS:
+
+CSS consists of three main components:
+
+Selectors: Target the HTML elements you want to style.
+Properties: Define the specific styles you want to apply.
+Values: Set the desired values for each property.
