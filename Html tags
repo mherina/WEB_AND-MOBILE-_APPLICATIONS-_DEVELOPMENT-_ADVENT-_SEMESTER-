@@ -1,0 +1,63 @@
+Basic Structure
+<!DOCTYPE html>: Declares the document type and version of HTML.
+
+<html>: The root element that contains all other HTML elements.
+
+<head>: Contains metadata, links to stylesheets, and scripts.
+
+<body>: Contains the visible content of the web page.
+
+Content Structuring
+<h1> to <h6>: Header tags for titles and subheadings.
+
+<p>: Paragraph tag for text content.
+
+<div>: Division tag for grouping content.
+
+<span>: Inline container for text and styling.
+
+Multimedia
+<img>: Embeds images.
+
+<video>: Embeds video content.
+
+<audio>: Embeds audio content.
+
+Links and Navigation
+<a>: Anchor tag for hyperlinks.
+
+<nav>: Defines navigation links.
+
+Lists
+<ul>: Unordered list.
+
+<ol>: Ordered list.
+
+<li>: List item.
+
+Forms and Input
+<form>: Container for form elements.
+
+<input>: Input field for user data.
+
+<textarea>: Multi-line text input.
+
+<button>: Button element.
+
+Tables
+<table>: Defines a table.
+
+<tr>: Table row.
+
+<td>: Table data cell.
+
+<th>: Table header cell.
+
+Semantic Elements
+<header>: Defines a header section.
+
+<footer>: Defines a footer section.
+
+<article>: Self-contained content.
+
+<section>: Groups related content
