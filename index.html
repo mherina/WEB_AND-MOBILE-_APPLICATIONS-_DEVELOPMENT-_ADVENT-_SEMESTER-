@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="login-card">
+    <div class="card">
       <h2>Login</h2>
       <h3>Enter your credentials</h3>
-      <form class="login-form">
+      <form class="form">
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
-        <a href="https://website.com">Forgot your password?</a>
+        <label>
+          <input type="checkbox" />
+          <span class="checkbox-wrapper">
+            <span class="checkbox"></span>
+          </span>
+          <span class="checkbox-text"> Stay logged in </span>
+        </label>
         <button type="submit">Login</button>
       </form>
     </div>
