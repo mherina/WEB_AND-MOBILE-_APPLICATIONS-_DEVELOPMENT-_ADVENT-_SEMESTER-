@@ -1,177 +1,132 @@
+body {
+  font-family: "Euclid Circular A", "Poppins";
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 0 30px;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
-
-@keyframes rotate {
-  100% {
-    background-position: 25% 50%;
-  }
-}
-
-:root {
-  --color-primary: #3192e5;
-}
-
-body {
-  display: grid;
-  place-items: center;
-  margin: 0;
-  height: 100vh;
-  padding: 0 24px;
-  background-color: var(--color-primary);
-  background-image: url("bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Euclid Circular A";
-  color: #f9f9f9;
-  animation: rotate 6s infinite alternate linear;
-}
-
-.card {
-  position: relative;
-  z-index: 3;
+button,
+input {
+  border: 0;
   width: 100%;
-  margin: 0 20px;
-  padding: 70px 30px 44px;
-  border-radius: 20px;
-  background: rgba(0 0 0 / 17%);
-  backdrop-filter: blur(10px);
-  text-align: center;
-}
-
-@media (width >= 448px) {
-  .card {
-    margin: 0;
-    width: 70%;
-    min-width: 400px;
-  }
-}
-
-@media (width >= 500px) {
-  body {
-    padding: 0;
-  }
-}
-
-@media (width >= 628px) {
-  .card {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0 44px;
-    width: 50%;
-    max-width: 500px;
-    min-width: auto;
-    display: flex;
-    border-radius: 0;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.card > h2 {
-  font-size: 36px;
-  font-weight: 400;
-  margin: 0 0 12px;
-}
-
-.card > h3 {
-  color: rgb(255 255 255 / 38%);
-  margin: 0 0 48px;
-  font-weight: 400;
+  height: 60px;
+  background: transparent;
+  font-family: inherit;
   font-size: 16px;
+  outline: none;
+}
+
+.signup {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  background: rgb(32 31 33 / 80%);
+  backdrop-filter: blur(50px);
+}
+
+.signup > h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 6px;
+  color: rgb(255 255 255 / 96%);
+}
+
+.signup > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 30px;
+  color: rgb(255 255 255 / 40%);
 }
 
 .form {
-  width: 100%;
   margin: 0;
   display: grid;
   gap: 16px;
 }
 
-.form > :is(input, button) {
-  width: 100%;
-  height: 56px;
-  border-radius: 6px;
-  border: 0;
+.textbox {
+  position: relative;
+  margin-bottom: 16px;
 }
 
-.form > input {
+.textbox span {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 0;
+  font-size: 22px;
+  pointer-events: none;
+  color: rgb(255 255 255 / 40%);
+}
+
+.textbox input {
+  padding: 0 24px 0 36px;
+  border-bottom: 2px solid rgb(255 255 255 / 5%);
   color: rgb(255 255 255 / 96%);
-  background: rgb(255 255 255 / 8%);
-  font-family: inherit;
-  font-size: 16px;
-  padding: 0 16px;
+  height: 72px;
+  transition: 0.3s;
 }
 
-.form > input:focus {
-  outline: var(--color-primary);
+:is(input:focus, input:valid) ~ label {
+  translate: -40px -40px;
+  scale: 0.875;
 }
 
-.form > input::placeholder {
-  color: rgb(255 255 255 / 38%);
+input:focus ~ label {
+  color: rgb(255 255 255 / 40%);
 }
 
-.form > button {
+input:focus {
+  border-color: rgb(255 255 255 / 76%);
+}
+
+:is(input:focus, input:valid) ~ span {
+  color: rgb(255 255 255 / 76%);
+}
+
+.textbox label {
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  translate: 0 -50%;
+  color: rgb(255 255 255 / 40%);
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.form button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
-  width: 100%;
-  height: 56px;
-  padding: 0 16px;
-  background: var(--color-primary);
+  padding: 0 24px;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 12%);
   color: #f9f9f9;
   border: 0;
   font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-  transition: all 0.375s;
+  font-weight: 600;
 }
 
-.form > a {
-  color: var(--color-primary);
-  font-size: 16px;
-  text-align: left;
-  text-decoration: none;
-  margin-bottom: 30px;
-}
-
-.form label {
-  display: block;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 6px 0 8px;
+.signup p {
+  margin: 0 0 22px;
   color: rgb(255 255 255 / 50%);
 }
 
-.form label input {
-  visibility: hidden;
-  display: none;
-}
-
-.form input:checked ~ .checkbox-wrapper .checkbox {
-  transform: rotate(45deg);
-  width: 14px;
-  margin-left: 12px;
-  margin-top: -2px;
-  border-color: var(--color-primary);
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-radius: 0;
-}
-
-.checkbox-wrapper {
-  width: 32px;
-  height: 32px;
-}
-
-.checkbox {
-  display: block;
-  width: inherit;
-  height: inherit;
-  border: 3px solid rgb(255 255 255 / 18%);
-  border-radius: 6px;
-  transition: all 0.375s;
+.signup p > a {
+  color: rgb(255 255 255 / 96%);
+  text-decoration: none;
 }
